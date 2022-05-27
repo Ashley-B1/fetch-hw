@@ -16,7 +16,7 @@ const addTodos = data => {
     listTodo.innerHTML += `<li class='todo-item'>
       <div class='item-left'>
         <input type='checkbox' id='complete' />
-        ${item.title}
+        <label for='complete'>${item.title}</label>
       </div>
       <div class='item-right'>
         <i class="fas fa-pencil-alt"></i>
@@ -25,26 +25,3 @@ const addTodos = data => {
     </li>`;
   });
 };
-
-// let todoContainer = document.querySelector('#todo-container');
-// let box = document.createElement('div');
-// let boxId = document.createElement('h2');
-// let taskComplete = document.createElement('div');
-// let boxTodo = document.createElement('h3');
-// let checkBox = document.createElement('input');
-// let done = document.createElement('span');
-
-// todoContainer.append(box);
-// box.appendChild(boxId);
-// box.appendChild(taskComplete);
-// taskComplete.appendChild(boxTodo);
-// taskComplete.appendChild(checkBox);
-// taskComplete.appendChild(done);
-
-// box.setAttribute('class', 'todo-info');
-// taskComplete.setAttribute('class', 'complete-section');
-// checkBox.setAttribute('type', 'checkbox');
-
-// boxId.innerText = `${item.id}.`;
-// boxTodo.innerText = item.title;
-// done.innerText = 'Done';
