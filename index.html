@@ -14,8 +14,19 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 class="todo-header">To-Do's:</h1>
-    <section id="todo-container"></section>
+    <section id="main-page">
+      <div class="main-banner"></div>
+      <section id="todo-container">
+        <div class="new-todo">
+          <h3 class="new-title">New Todo:</h3>
+          <div class="add-item">
+            <input type="text" class="new-input" />
+            <button class="add-button">Add</button>
+          </div>
+        </div>
+        <div id="todo-list"></div>
+      </section>
+    </section>
   </body>
   <script src="fetch.js"></script>
 </html>
