@@ -4,15 +4,25 @@ fetch('https://jsonplaceholder.typicode.com/todos')
 
 const addTodos = data => {
   data.forEach(item => {
-    console.log(item);
+    // console.log(item);
 
     let todoList = document.querySelector('#todo-list');
     let listTodo = document.createElement('ul');
-    let todoItem = document.createElement('li');
-    let todoLeft = document.createElement('div');
-    let todoRight = document.createElement('div');
 
-    // todoContainer.setAttribute('class', 'todo-list');
+    listTodo.setAttribute('class', 'list-todo');
+
+    todoList.append(listTodo);
+
+    listTodo.innerHTML += `<li class='todo-item'>
+      <div class='item-left'>
+        <input type='checkbox' id='complete' />
+        ${item.title}
+      </div>
+      <div class='item-right'>
+        <i class="fas fa-pencil-alt"></i>
+        <i class="fas fa-trash"></i>
+      </div>
+    </li>`;
   });
 };
 
